@@ -16,6 +16,7 @@ import schedule
 from time import sleep
 from flask import Flask
 import shutil
+from threading import Thread
 from flask import send_file, send_from_directory, safe_join, abort
 
 app = Flask(__name__)
@@ -161,16 +162,23 @@ def hello_world():
   bulkGenerate()
   return "Files generated"
   
+
   
 @app.route('/v')
 def home():
+  def fsz():
+  	bulkGenerate()
+  thread = Thread(target=fsz)
+  thread.start()
+  print("thread started")
+  
   dir_path = os.path.dirname(os.path.realpath(__file__))
   file_ = os.path.join(dir_path, "gen/short.zip")
   files_dir = os.path.join(dir_path, "gen")
   
   try:
         return send_from_directory(files_dir, filename=file_, as_attachment=True)
-    except FileNotFoundError:
+  except FileNotFoundError:
         abort(404)
   
 
