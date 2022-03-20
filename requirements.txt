@@ -1,0 +1,7 @@
+gunicorn
+selenium==3.141.0
+schedule
+moviepy
+Pillow
+pygame
+flask
