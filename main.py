@@ -180,9 +180,9 @@ def home():
   files_dir = os.path.join(dir_path, "gen")
   
   try:
-        return send_from_directory(files_dir, path=file_, as_attachment=True)
-  except FileNotFoundError:
-        abort(404)
+    return send_file(file_,  attachment_filename="short.zip")
+  except Exception as e:
+    return str(e)
   
 
 if __name__ == "__main__":
