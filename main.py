@@ -38,6 +38,15 @@ def deleteDownloads():
         except OSError:
             os.remove(path)
 
+def deletegen():
+    dir = os.path.join(dir_path, "gen")
+    for files in os.listdir(dir):
+        path = os.path.join(dir, files)
+        try:
+            shutil.rmtree(path)
+        except OSError:
+            os.remove(path)
+
 def deleteResized():
     dir = os.path.join(dir_path, "resized")
     for files in os.listdir(dir):
@@ -128,6 +137,7 @@ def getRandomImg():
     return files
 
 def generateVedio():
+    deleteVid()
     dest = os.path.join(dir_path, "outputs")
     images_list = getRandomImg()
 
@@ -153,6 +163,7 @@ def bulkGenerate():
     dir_path = os.path.dirname(os.path.realpath(__file__))
     out_ = os.path.join(dir_path, "gen/short.zip")
     dir_ = os.path.join(dir_path, "outputs")
+    deletegen()
     shutil.make_archive(out_ , 'zip', dir_)
     print("files compressed")
     
@@ -169,11 +180,11 @@ def hello_world():
   
 @app.route('/v')
 def home():
-  def fsz():
-  	bulkGenerate()
-  thread = Thread(target=fsz)
-  thread.start()
-  print("thread started")
+  #def fsz():
+  #	bulkGenerate()
+  #thread = Thread(target=fsz)
+  #thread.start()
+  #print("thread started")
   
   dir_path = os.path.dirname(os.path.realpath(__file__))
   file_ = os.path.join(dir_path, "gen/short.zip")
