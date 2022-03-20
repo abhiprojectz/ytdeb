@@ -165,7 +165,7 @@ def bulkGenerate():
     dir_ = os.path.join(dir_path, "outputs")
     deletegen()
     shutil.make_archive(out_ , 'zip', dir_)
-    print(os.path.isfile(os.path.join("out_", ".zip")))
+    print(os.path.isfile("/app/gen/short.zip"))
     print("files compressed")
     
     
