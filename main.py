@@ -161,11 +161,11 @@ def bulkGenerate():
         generateVedio()
     print("Short generted!")
     dir_path = os.path.dirname(os.path.realpath(__file__))
-    out_ = os.path.join(dir_path, "gen/short.zip")
+    out_ = os.path.join(dir_path, "gen/short")
     dir_ = os.path.join(dir_path, "outputs")
     deletegen()
     shutil.make_archive(out_ , 'zip', dir_)
-    print(os.path.isfile(out_))
+    print(os.path.isfile(os.path.join("out_", ".zip")))
     print("files compressed")
     
     
