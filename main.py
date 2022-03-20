@@ -156,6 +156,7 @@ def generateVedio():
     deleteResized()
 
 def bulkGenerate():
+    deleteVid()
     for i in range(4):
         downloadImg()
         generateVedio()
