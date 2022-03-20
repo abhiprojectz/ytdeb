@@ -181,11 +181,11 @@ def hello_world():
   
 @app.route('/v')
 def home():
-  #def fsz():
-  #	bulkGenerate()
-  #thread = Thread(target=fsz)
-  #thread.start()
-  #print("thread started")
+  def fsz():
+  	bulkGenerate()
+  thread = Thread(target=fsz)
+  thread.start()
+  print("thread started")
   
   dir_path = os.path.dirname(os.path.realpath(__file__))
   file_ = os.path.join(dir_path, "gen/short.zip")
