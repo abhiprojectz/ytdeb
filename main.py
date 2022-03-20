@@ -159,8 +159,11 @@ def bulkGenerate():
     
 @app.route('/')
 def hello_world():
-  bulkGenerate()
-  return "Files generated"
+  def fsz():
+  	bulkGenerate()
+  thread = Thread(target=fsz)
+  thread.start()
+  return "File getting generated!"
   
 
   
