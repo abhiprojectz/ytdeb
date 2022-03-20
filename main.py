@@ -137,7 +137,7 @@ def getRandomImg():
     return files
 
 def generateVedio():
-    deleteVid()
+    #deleteVid()
     dest = os.path.join(dir_path, "outputs")
     images_list = getRandomImg()
 
@@ -165,6 +165,7 @@ def bulkGenerate():
     dir_ = os.path.join(dir_path, "outputs")
     deletegen()
     shutil.make_archive(out_ , 'zip', dir_)
+    print(os.path.isfile(out_))
     print("files compressed")
     
     
