@@ -180,7 +180,7 @@ def home():
   files_dir = os.path.join(dir_path, "gen")
   
   try:
-        return send_from_directory(files_dir, filename=file_, as_attachment=True)
+        return send_from_directory(files_dir, path=file_, as_attachment=True)
   except FileNotFoundError:
         abort(404)
   
