@@ -172,11 +172,12 @@ def bulkGenerate():
     
 @app.route('/')
 def hello_world():
-  def fsz():
-  	bulkGenerate()
-  thread = Thread(target=fsz)
-  thread.start()
-  return "File getting generated!"
+  #def fsz():
+  #	bulkGenerate()
+  #thread = Thread(target=fsz)
+  #thread.start()
+  print("Apo running....")
+  return "Api is up..."
   
 
   
