@@ -180,15 +180,18 @@ def hello_world():
   return "Api is up..."
   
 
-  
-@app.route('/v')
-def home():
+@app.route('/start')
+def start():
   def fsz():
   	bulkGenerate()
   thread = Thread(target=fsz)
   thread.start()
   print("thread started")
+  return "generating...."
   
+  
+@app.route('/v')
+def home():
   dir_path = os.path.dirname(os.path.realpath(__file__))
   file_ = os.path.join(dir_path, "gen/short.zip")
   files_dir = os.path.join(dir_path, "gen")
