@@ -1,0 +1,92 @@
+[
+    {
+        "domain": ".youtube.com",
+        "expirationDate": 1721107913.569242,
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "__Secure-3PSID",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "LQhm56FD--GUEW6d8UOMgvnJtwoFXhD384UiT2q10MW6-Gk42qlZBNKNoiDVpx0TdRQUjw."
+    },
+    {
+        "domain": ".youtube.com",
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "YSC",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": true,
+        "storeId": null,
+        "value": "g7V0FxlMWlk"
+    },
+    {
+        "domain": ".youtube.com",
+        "expirationDate": 1721107913.569315,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "__Secure-3PAPISID",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "2wR9PcRpNr3B_Jae/AxAV6WPHlWRjqzOME"
+    },
+    {
+        "domain": ".youtube.com",
+        "expirationDate": 1689582385.587634,
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "__Secure-3PSIDCC",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "AJi4QfE2ENlMcKyZXDtOyhYHuEwT7Q3Z9hMRuGgJ3Mfnz8n74-hKaffYCqsXqUCLD8b3xSmA"
+    },
+    {
+        "domain": ".youtube.com",
+        "expirationDate": 1721118367.708588,
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "LOGIN_INFO",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "AFmmF2swRgIhAInFbuKCpwvlOxkuxUA3LP7YbqGea-3iS7QSMj84zH0AAiEAsfUqvfbvhiFyPPNpeiX3Ces_KvZvSh4-gH-Nvc_YlA0:QUQ3MjNmeThaREpmdnBEdVl2M1RBZHRMNXpkSTU5UU5Yd0k5VHhUX3ZwSTJmaU5mY0dvVTU1M0ZubDRJVlZEWnYtUk9yTjFJbWpVSzZBRmhCUFFsNlFBS2NrSVdSVExhOGpTMEpmWkRaWEZPY0Y5R2JCWTI3bTVjTmpJZTFEUm8zazFKaFE5dFo2SW5UU0dGY0JweXpneUZXLUw3a0FXc1F3"
+    },
+    {
+        "domain": ".youtube.com",
+        "expirationDate": 1721107920,
+        "hostOnly": false,
+        "httpOnly": false,
+        "name": "PREF",
+        "path": "/",
+        "sameSite": null,
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "f4=4000000&tz=Asia.Calcutta"
+    },
+    {
+        "domain": ".youtube.com",
+        "expirationDate": 1673587912.669781,
+        "hostOnly": false,
+        "httpOnly": true,
+        "name": "VISITOR_INFO1_LIVE",
+        "path": "/",
+        "sameSite": "no_restriction",
+        "secure": true,
+        "session": false,
+        "storeId": null,
+        "value": "coQKKW0_UKA"
+    }
+]
