@@ -1,5 +1,5 @@
 import random
-import requests # to get image from the web
+import requests
 import shutil
 from images_db_new import urls
 from PIL import Image
@@ -14,13 +14,10 @@ import subprocess
 from os.path import exists
 import schedule
 from time import sleep
-from flask import Flask
 import shutil
-from threading import Thread
-from flask import send_file, send_from_directory, safe_join, abort
+import subprocess 
+from time import sleep
 
-app = Flask(__name__)
-# ========================= ONLY FOR META3 (INSPIRA) =====================
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
 fps = 24
@@ -155,52 +152,19 @@ def generateVedio():
     concat_clip.write_videofile(target, fps=fps)
     deleteResized()
 
-def bulkGenerate():
-    deleteVid()
-    for i in range(4):
-        downloadImg()
-        generateVedio()
-    print("Short generted!")
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-    out_ = os.path.join(dir_path, "gen/short")
-    dir_ = os.path.join(dir_path, "outputs")
-    deletegen()
-    shutil.make_archive(out_ , 'zip', dir_)
-    print(os.path.isfile("/app/gen/short.zip"))
-    print("files compressed")
-    
-    
-@app.route('/')
-def hello_world():
-  #def fsz():
-  #	bulkGenerate()
-  #thread = Thread(target=fsz)
-  #thread.start()
-  print("Apo running....")
-  return "Api is up..."
-  
 
-@app.route('/start')
-def start():
-  def fsz():
-  	bulkGenerate()
-  thread = Thread(target=fsz)
-  thread.start()
-  print("thread started")
-  return "generating...."
-  
-  
-@app.route('/v')
-def home():
-  dir_path = os.path.dirname(os.path.realpath(__file__))
-  file_ = os.path.join(dir_path, "gen/short.zip")
-  files_dir = os.path.join(dir_path, "gen")
-  
-  try:
-    return send_file(file_,  attachment_filename="short.zip")
-  except Exception as e:
-    return str(e)
+def move_content():    
+    # move to /root folder
+    subprocess.run("mv  /root", shell=True)
+
+
+def yt_engine():
+    downloadImg()
+    generateVedio()
+    move_content():    
+
+
   
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    yt_engine()
